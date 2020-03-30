@@ -24,6 +24,7 @@ FORMAT DISKS
          mkfs.ext4 /dev/nvme0n1p3
  
 INSTALL BASE SYSTEM
+
          apt update
          apt install -y debootstrap
          mount /dev/nvme0n1p3 /mnt
