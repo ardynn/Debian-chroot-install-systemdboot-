@@ -28,7 +28,7 @@ INSTALL BASE SYSTEM
          apt update
          apt install -y debootstrap
          mount /dev/nvme0n1p3 /mnt
-         debootstrap --include=intel-microcode,bluez,bluez-tools,network-manager,wget,gpg,gpg2,firmware-linux-free,firmware-linux-nonfree,locales,sudo,git,console,setup,i965-va-driver,thermald,fonts-ipafont,fonts-vlgothic --arch amd64 bullseye /mnt http://ftp.jp.debian.org
+         debootstrap --include=intel-microcode,bluez,bluez-tools,network-manager,wget,gnupg gnupg2,firmware-linux-free,firmware-linux-nonfree,locales,sudo,git,console,setup,i965-va-driver,thermald,fonts-ipafont,fonts-vlgothic --arch amd64 bullseye /mnt http://ftp.jp.debian.org
          mount /dev/nvme0n1p1 /mnt/boot
          mount --bind /dev /mnt/dev
          mount -t sysfs sysfs /mnt/sys
